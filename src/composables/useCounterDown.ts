@@ -3,24 +3,26 @@ import { useLocalStorage } from '@/composables/useLocalStorage'
 
 
 export function useCounterDown(minutesBeforeDeadLine: MaybeRefOrGetter<number>): { hours: Ref<string>, min: Ref<string>, sec: Ref<string> } {
-  let deadLineMS: number = new Date(new Date().getTime() + toValue(minutesBeforeDeadLine) * 60 * 1000).getTime()
-  // const deadLine = new Date(`01/01/${new Date().getFullYear() + 1} 00:00:00`)
-
+  let deadLineMS_V: number = new Date(new Date().getTime() + toValue(minutesBeforeDeadLine) * 60 * 1000).getTime()
   let LS: Ref<string> = useLocalStorage('deadLine')
 
   if (LS.value)
-    deadLineMS = Number(LS.value)
+    deadLineMS_V = Number(LS.value)
   else
-    LS.value = String(deadLineMS)
+    LS.value = String(deadLineMS_V)
 
   const nowMS = ref<number>(new Date().getTime())
 
   const interval = setInterval(() => {
     nowMS.value = new Date().getTime()
   }, 1000);
+
   onUnmounted(() => clearInterval(interval));
 
-  let restMs = computed(() => Number(LS.value) - nowMS.value)
+  let restMs = computed(() => Number(deadLineMS_V) - nowMS.value)
+
+  console.log('nowMS.value ===', nowMS.value)
+
 
   const hours = computed(() => {
     let dd = String(Math.floor(Math.abs(restMs.value) / 1000 / 60 / 60)).padStart(2, '0')

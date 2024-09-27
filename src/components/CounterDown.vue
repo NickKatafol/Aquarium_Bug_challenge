@@ -7,7 +7,7 @@ const { hours, min, sec } = useCounterDown(20)
 </script>
 
 <template>
-  <div class="counter-wrapper" :class="[(+sec > 0) ? 'in-time' : 'out-time']">
+  <div class="counter-wrapper" :class="[sec.includes('-') ? 'out-time' : 'in-time']">
     <div>{{ hours }}</div>
     <div>{{ min }}</div>
     <div>{{ sec }}</div>
