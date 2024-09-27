@@ -21,9 +21,6 @@ export function useCounterDown(minutesBeforeDeadLine: MaybeRefOrGetter<number>):
 
   let restMs = computed(() => Number(deadLineMS_V) - nowMS.value)
 
-  console.log('nowMS.value ===', nowMS.value)
-
-
   const hours = computed(() => {
     let dd = String(Math.floor(Math.abs(restMs.value) / 1000 / 60 / 60)).padStart(2, '0')
     return restMs.value > 0 ? dd : '-' + dd
