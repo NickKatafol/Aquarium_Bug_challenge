@@ -13,6 +13,10 @@ There is the Aquarium.
 - If you click on the Fish it will disapire.
 
 
+It's the version with the bugs. <br> 
+The solution I'll send you shortly then.
+
+
 ## The bugs description
 
 1. If you click on the button "Add the random fish" the Fish is appired but NO moving at all.
@@ -30,6 +34,8 @@ So you hold only **20 minutes to fix 2 bags**. <br>
 You should work alone without an any help.
 
 The Remainder Back Counter is in the right top corner of the page. 
+
+
 
 
 ## Project Setup
