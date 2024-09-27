@@ -1,55 +1,44 @@
-# exam_challenge
+# The Feedback Competition
 
-This template should help get you started developing with Vue 3 in Vite.
+Dear Exam Vue.js team,
+I CHALLENGE YOU TO the Feedback Competition.
 
-## Recommended IDE Setup
+Thank you! 😎️🤘️
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Type Support for `.vue` Imports in TS
+## The project description
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+There is the Aquarium.
+- If you click on the button "Add the random fish" the Fish is appired moving along a random direction.
+- If you click on the Fish it will disapire.
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## The bugs description
+
+1. If you click on the button "Add the random fish" the Fish is appired but NO moving at all.
+2. If you click on the Fish it will NOT disapire.
+
+>**Hint**: 
+> The first bug includes the 2 separate causes.
+> For the both bugs it will be enough to work only with the **/components/Fish.vue** Component.
+
+
+## The Challenge Rules
+
+In the Exam you are allowed 75 minutes for 2 tasks, 2/3 of the time for the biggest one and 1/3 for the bug task. 
+So you hold only 20 minutes to fix 2 bags. 
+You should work alone without an any help.
+
+The Remainder back counter is in the right top corner of the page. 
+
 
 ## Project Setup
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
 
-```sh
-npm run build
-```
 
-### Run Headed Component Tests with [Cypress Component Testing](https://on.cypress.io/component)
 
-```sh
-npm run test:unit:dev # or `npm run test:unit` for headless testing
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
