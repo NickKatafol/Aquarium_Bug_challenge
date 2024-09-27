@@ -105,6 +105,10 @@ nav {
   background-size: contain;
 }
 
+.aquarium > :hover {
+  cursor: pointer;
+}
+
 .fish-panel {
   margin-top: 30px;
   display: flex;
